@@ -1,0 +1,65 @@
+.item-wrap .weui-media-box::before {
+  left: 0;
+}
+
+.item-wrap .weui-media-box__hd_in-appmsg {
+  margin-right: 0;
+}
+.item-wrap .weui-media-box__desc{
+    margin-top: 5px;
+}
+.item-wrap .weui-panel::before{
+    border-top: none;
+}
+
+.circle-base {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+
+.circle-exprence {
+  border: 1px solid #0be;
+  color: #0be;
+}
+.circle-share {
+  border: 1px solid #00D256;
+  color: #00D256;
+}
+.circle-question {
+  border: 1px solid #ffa500;
+  color: #ffa500;
+}
+.circle-other {
+  border: 1px solid #888;
+  color: #888;
+}
+.item-center {
+  padding: 0 10px;
+}
+.item-right-wrap{
+    line-height: normal;
+    width: 75px;
+}
+.item-right{
+    margin-top: 32px;
+    transform: translateY(-50%);
+}
+.task-price{
+    font-size: 17px;
+    color: #e64340;
+    text-align:right;
+}
+.check-time{
+    margin-top: 4px;
+    color: #888888;
+    font-size: 13px;
+    text-align:right;
+}
+.vip-use{
+    color: #0be;
+    padding-left: 5px;
+}
+

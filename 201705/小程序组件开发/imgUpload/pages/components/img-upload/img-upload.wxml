@@ -1,0 +1,39 @@
+<!-- 上传图片 -->
+<!-- 
+  maxNum 允许上传最大个数
+  previewList 预览图片list
+  uploadStatus 上传状态 1上传中,2 失败 null成功 
+-->
+<!-- 需要先引入wetoast -->
+<template  name="imgupload" class="__imgupload">
+  <view class="title" wx:if="{{title}}">{{title}}</view>
+  <view class="clearfix">
+    <view class="weui-uploader__files " id="uploaderFiles">
+      <!-- 已上传图片展示 -->
+      <block wx:for="{{previewList}}" wx:for-index="idx" wx:for-item="pic" wx:key="idx">
+        <view class="{{statusList[idx]?'weui-uploader__file weui-uploader__file_status':'weui-uploader__file'}}" id="{{idx}}">
+          <image class="weui-uploader__img" src="{{pic}}" mode="aspectFill"></image>
+          
+          <!-- 上传失败 -->
+          <view class="weui-uploader__file-content" bindtap="fnRechooseImg" id="{{idx}}" data-prefix="{{prefix}}" wx:if="{{statusList[idx] == 2}}">
+            <icon type="warn" size="23" color="#F43530"></icon>
+          </view>
+          
+          <!-- 上传中 -->
+          <view class="weui-uploader__file-content" wx:if="{{statusList[idx] == 1}}">
+            <view class="weui-loading"></view>
+          </view>
+          <view class="btn-close" bindtap="fnDelUpload" id="{{idx}}" data-prefix="{{prefix}}" wx:if="{{!statusList[idx] || statusList[idx] == 2}}">
+            <icon type="clear" size="15" />
+          </view>
+        </view>
+      </block>
+  
+      <!-- 上传按钮 -->
+      <view class="weui-uploader__input-box" wx:if="{{previewList.length < maxNum}}">
+        <view class="weui-uploader__input" bindtap="chooseImage" data-prefix="{{prefix}}"></view>
+      </view>
+    </view>
+  </view>
+
+</template>

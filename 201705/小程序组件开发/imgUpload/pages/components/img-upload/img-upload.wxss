@@ -1,0 +1,37 @@
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/*图片上传*/
+.weui-uploader__img {
+  width:75px;
+  height:75px;
+  background-color: #E8E8E8;
+}
+
+.weui-uploader__file{
+  position: relative;
+  margin-right: 7px;
+  margin-bottom: 7px;
+  display: inline-block;
+}
+
+.weui-uploader__file .btn-close{
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  content: "X";
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 600;
+  color: #f9fafc;
+  text-align: center;
+  background-color: #fff;
+}

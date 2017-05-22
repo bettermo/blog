@@ -1,0 +1,8 @@
+@import "../components/img-upload/img-upload.wxss";
+.container{
+    border: 1px solid red;
+}
+.clear-fliex:after{
+    content: '';
+    clear: both;
+}

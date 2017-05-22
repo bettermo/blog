@@ -1,0 +1,11 @@
+<import src="/pages/components/img-upload/img-upload"/>
+<import src="/pages/components/toast/wetoast.wxml" />
+<template is="wetoast" data="{{...__wetoast__}}" />
+<view class="test">
+    <view>红框内插入组件</view>
+    <view class="container">
+        <template wx:if="{{first__imgUpload}}" is="imgupload" data="{{...first__imgUpload,prefix: 'first'}}"/>
+        <template wx:if="{{second__imgUpload}}" is="imgupload" data="{{...second__imgUpload, prefix: 'second'}}"/>
+    </view>
+    <button bindtap="fnGetUpResult">输出结果</button>
+</view>
